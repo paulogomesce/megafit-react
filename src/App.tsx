@@ -30,73 +30,51 @@ function App() {
   ) : (
     <>
       <Routes>
+
         <Route path="/auth/signin" element={<SignIn />} />
         <Route path="/auth/signup" element={<SignUp />} />
+
         <Route element={<DefaultLayout />}>
           <Route index element={<ECommerce />} />
-          <Route
-            path="/calendar"
-            element={
+          <Route path="/calendar" element={
               <Suspense fallback={<Loader />}>
                 <Calendar />
-              </Suspense>
-            }
+              </Suspense>}
           />
-          <Route
-            path="/profile"
-            element={
+          <Route path="/profile" element={
               <Suspense fallback={<Loader />}>
                 <Profile />
-              </Suspense>
-            }
+              </Suspense>}
           />
-          <Route
-            path="/forms/form-elements"
-            element={
+          <Route path="/forms/form-elements" element={
               <Suspense fallback={<Loader />}>
                 <FormElements />
-              </Suspense>
-            }
+              </Suspense>}
           />
-          <Route
-            path="/forms/form-layout"
-            element={
+          <Route path="/forms/form-layout" element={
               <Suspense fallback={<Loader />}>
                 <FormLayout />
-              </Suspense>
-            }
+              </Suspense>}
           />
-          <Route
-            path="/tables"
-            element={
+          <Route path="/tables" element={
               <Suspense fallback={<Loader />}>
                 <Tables />
-              </Suspense>
-            }
+              </Suspense>}
           />
-          <Route
-            path="/settings"
-            element={
+          <Route path="/settings" element={
               <Suspense fallback={<Loader />}>
                 <Settings />
-              </Suspense>
-            }
+              </Suspense>}
           />
-          <Route
-            path="/chart"
-            element={
+          <Route path="/chart" element={
               <Suspense fallback={<Loader />}>
                 <Chart />
-              </Suspense>
-            }
+              </Suspense>}
           />
-          <Route
-            path="/ui/alerts"
-            element={
+          <Route path="/ui/alerts" element={
               <Suspense fallback={<Loader />}>
                 <Alerts />
-              </Suspense>
-            }
+              </Suspense>}
           />
           <Route
             path="/ui/buttons"
