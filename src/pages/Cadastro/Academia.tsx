@@ -1,70 +1,102 @@
 import { Link } from "react-router-dom"
+import Label from "../../components/Label"
 
 export default function Academia() {
     return (
         <>
             <form>
                 <div className="mb-4">
-                    <label className="mb-1 block font-medium text-black dark:text-white">
-                        Nome
-                    </label>
+                    {/* Nome */}
+                    <Label texto="Nome" />
                     <div className="relative">
                         <input type="text" placeholder="Nome"
-                               className="w-full rounded-lg border border-stroke bg-transparent py-1 pl-3
+                            className="w-full rounded-lg border border-stroke bg-transparent py-1 pl-3
                                             pr-10 outline-none focus:border-primary focus-visible:shadow-none
                                             dark:border-form-strokedark dark:bg-form-input dark:focus:border-primary"/>
 
                         <span className="absolute right-2 top-1.5">
                             <svg className="fill-current"
-                                 width="20"
-                                 height="20"
-                                 viewBox="0 0 22 22"
-                                 fill="none"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                <g opacity="0.5">
-                                    <path d="M11.0008 9.52185C13.5445 9.52185 15.607 7.5281 15.607 5.0531C15.607 2.5781 13.5445 0.584351 11.0008 0.584351C8.45703 0.584351 6.39453 2.5781 6.39453 5.0531C6.39453 7.5281 8.45703 9.52185 11.0008 9.52185ZM11.0008 2.1656C12.6852 2.1656 14.0602 3.47185 14.0602 5.08748C14.0602 6.7031 12.6852 8.00935 11.0008 8.00935C9.31641 8.00935 7.94141 6.7031 7.94141 5.08748C7.94141 3.47185 9.31641 2.1656 11.0008 2.1656Z"
-                                          fill=""/>
-                                    <path d="M13.2352 11.0687H8.76641C5.08828 11.0687 2.09766 14.0937 2.09766 17.7719V20.625C2.09766 21.0375 2.44141 21.4156 2.88828 21.4156C3.33516 21.4156 3.67891 21.0719 3.67891 20.625V17.7719C3.67891 14.9531 5.98203 12.6156 8.83516 12.6156H13.2695C16.0883 12.6156 18.4258 14.9187 18.4258 17.7719V20.625C18.4258 21.0375 18.7695 21.4156 19.2164 21.4156C19.6633 21.4156 20.007 21.0719 20.007 20.625V17.7719C19.9039 14.0937 16.9133 11.0687 13.2352 11.0687Z"
-                                          fill=""/>
-                                </g>
-                            </svg>
-                        </span>
-                    </div>
-                </div>
-
-                <div className="mb-4">
-                    <label className="mb-1 block font-medium text-black dark:text-white">
-                        Email
-                    </label>
-                    <div className="relative">
-                        <input type="email" placeholder="Enter your email"
-                               className="w-full rounded-lg border border-stroke bg-transparent py-1 pl-3 pr-10 outline-none focus:border-primary focus-visible:shadow-none dark:border-form-strokedark dark:bg-form-input dark:focus:border-primary"
-                        />
-
-                        <span className="absolute right-2 top-2">
-                            <svg
-                                className="fill-current"
                                 width="20"
                                 height="20"
                                 viewBox="0 0 22 22"
                                 fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
+                                xmlns="http://www.w3.org/2000/svg">
                                 <g opacity="0.5">
-                                    <path
-                                        d="M19.2516 3.30005H2.75156C1.58281 3.30005 0.585938 4.26255 0.585938 5.46567V16.6032C0.585938 17.7719 1.54844 18.7688 2.75156 18.7688H19.2516C20.4203 18.7688 21.4172 17.8063 21.4172 16.6032V5.4313C21.4172 4.26255 20.4203 3.30005 19.2516 3.30005ZM19.2516 4.84692C19.2859 4.84692 19.3203 4.84692 19.3547 4.84692L11.0016 10.2094L2.64844 4.84692C2.68281 4.84692 2.71719 4.84692 2.75156 4.84692H19.2516ZM19.2516 17.1532H2.75156C2.40781 17.1532 2.13281 16.8782 2.13281 16.5344V6.35942L10.1766 11.5157C10.4172 11.6875 10.6922 11.7563 10.9672 11.7563C11.2422 11.7563 11.5172 11.6875 11.7578 11.5157L19.8016 6.35942V16.5688C19.8703 16.9125 19.5953 17.1532 19.2516 17.1532Z"
-                                        fill=""
-                                    />
+                                    <path d="M11.0008 9.52185C13.5445 9.52185 15.607 7.5281 15.607 5.0531C15.607 2.5781 13.5445 0.584351 11.0008 0.584351C8.45703 0.584351 6.39453 2.5781 6.39453 5.0531C6.39453 7.5281 8.45703 9.52185 11.0008 9.52185ZM11.0008 2.1656C12.6852 2.1656 14.0602 3.47185 14.0602 5.08748C14.0602 6.7031 12.6852 8.00935 11.0008 8.00935C9.31641 8.00935 7.94141 6.7031 7.94141 5.08748C7.94141 3.47185 9.31641 2.1656 11.0008 2.1656Z"
+                                        fill="" />
+                                    <path d="M13.2352 11.0687H8.76641C5.08828 11.0687 2.09766 14.0937 2.09766 17.7719V20.625C2.09766 21.0375 2.44141 21.4156 2.88828 21.4156C3.33516 21.4156 3.67891 21.0719 3.67891 20.625V17.7719C3.67891 14.9531 5.98203 12.6156 8.83516 12.6156H13.2695C16.0883 12.6156 18.4258 14.9187 18.4258 17.7719V20.625C18.4258 21.0375 18.7695 21.4156 19.2164 21.4156C19.6633 21.4156 20.007 21.0719 20.007 20.625V17.7719C19.9039 14.0937 16.9133 11.0687 13.2352 11.0687Z"
+                                        fill="" />
                                 </g>
                             </svg>
                         </span>
                     </div>
                 </div>
 
+                <div className="mb-4.5 flex flex-col gap-6 xl:flex-row">
+                    {/* CPF */}
+                    <div className="w-full xl:w-1/2">
+                        <Label texto="CPF" />
+                        <div className="relative">
+                            <input type="text"
+                                placeholder="Nome"
+                                className="w-full rounded-lg border border-stroke bg-transparent py-1 pl-3
+                                                pr-10 outline-none focus:border-primary focus-visible:shadow-none
+                                                dark:border-form-strokedark dark:bg-form-input dark:focus:border-primary"/>
+
+                            <span className="absolute right-2 top-1.5">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    strokeWidth={1.5}
+                                    stroke="currentColor"
+                                    className="w-5 h-5">
+                                    <path strokeLinecap="round"
+                                          strokeLinejoin="round" d="M15 9h3.75M15 12h3.75M15 15h3.75M4.5 19.5h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5zm6-10.125a1.875 1.875 0 11-3.75 0 1.875 1.875 0 013.75 0zm1.294 6.336a6.721 6.721 0 01-3.17.789 6.721 6.721 0 01-3.168-.789 3.376 3.376 0 016.338 0z" />
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+
+                    {/* Nascimento / Fundação */}
+                    <div className="w-full xl:w-1/2">
+                        <div>
+                            <Label texto="Nascimento/Fundação"/>
+                            <div className="relative">
+                                <input
+                                    type="date"
+                                    className="custom-input-date custom-input-date-1 w-full rounded-lg border-[1.5px] border-stroke bg-transparent py-1 px-3 outline-none transition focus:border-primary active:border-primary dark:border-form-strokedark dark:bg-form-input dark:focus:border-primary"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div className="mb-4">
-                    <label className="mb-1 block font-medium text-black dark:text-white">
-                        Password
-                    </label>
+                    <Label texto="E-mail" />
+                    <div className="relative">
+                        <input type="email" placeholder="e-mail"
+                            className="w-full rounded-lg border border-stroke bg-transparent py-1 pl-3 pr-10 outline-none focus:border-primary focus-visible:shadow-none dark:border-form-strokedark dark:bg-form-input dark:focus:border-primary"
+                        />
+
+                        <span className="absolute right-2 top-2">
+                            <svg className="fill-current"
+                                width="20"
+                                height="20"
+                                viewBox="0 0 22 22"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g opacity="0.5">
+                                    <path d="M19.2516 3.30005H2.75156C1.58281 3.30005 0.585938 4.26255 0.585938 5.46567V16.6032C0.585938 17.7719 1.54844 18.7688 2.75156 18.7688H19.2516C20.4203 18.7688 21.4172 17.8063 21.4172 16.6032V5.4313C21.4172 4.26255 20.4203 3.30005 19.2516 3.30005ZM19.2516 4.84692C19.2859 4.84692 19.3203 4.84692 19.3547 4.84692L11.0016 10.2094L2.64844 4.84692C2.68281 4.84692 2.71719 4.84692 2.75156 4.84692H19.2516ZM19.2516 17.1532H2.75156C2.40781 17.1532 2.13281 16.8782 2.13281 16.5344V6.35942L10.1766 11.5157C10.4172 11.6875 10.6922 11.7563 10.9672 11.7563C11.2422 11.7563 11.5172 11.6875 11.7578 11.5157L19.8016 6.35942V16.5688C19.8703 16.9125 19.5953 17.1532 19.2516 17.1532Z"
+                                          fill=""/>
+                                </g>
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+
+                {/* Senha */}
+                <div className="mb-4">
+                    <Label texto="Senha"/>
                     <div className="relative">
                         <input
                             type="password"
@@ -97,9 +129,7 @@ export default function Academia() {
                 </div>
 
                 <div className="mb-6">
-                    <label className="mb-1 block font-medium text-black dark:text-white">
-                        Re-type Password
-                    </label>
+                    <Label texto="Repita a senha" />
                     <div className="relative">
                         <input
                             type="password"
